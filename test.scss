@@ -1,0 +1,284 @@
+// Scss Document
+
+/*@import "./tentcss/dist/tent.min.css";*/
+@import url('https://fonts.googleapis.com/css?family=Lobster&family=Roboto&display=swap');
+$baseFontFamily: 'Roboto',sans-serif !default;
+
+$navbarback: #2E2C2F;
+$backgroundcolor: #1C1A1E;
+$primaerfarbe: #FFF5F8;
+$sekundaerfarbe: #BB0A21;
+$iconfarbe: #b6ff00;
+$navbarfocus: #242225;
+
+.projects_p {
+  align-items: center;
+  text-align: justify;
+  margin-right: auto;
+}
+
+.breakpoints {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+div.projects h2 {
+  margin-left: -5%;
+  font-size: 5rem;
+  text-align: center;
+  align-items: center;
+}
+
+div.projects {
+  text-align: center;
+  align-items: center;
+  margin-left: -5%;
+  margin-right: auto;
+}
+
+div.aboutme h2 {
+  font-size: 5rem;
+  margin-left: -5%;
+  text-align: center;
+  align-items: center;
+}
+
+div.aboutme p {
+  font-size: 1.5rem;
+}
+
+div.aboutme {
+  align-items: center;
+  text-align: justify;
+  margin-right: auto;
+  
+}
+
+.introheader {
+  background-image: url('./img/home3.png');
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  align-items: center;
+
+}
+
+.neonhover:hover{
+  text-shadow: 0 0 20px $iconfarbe;
+  font-weight: 700;
+}
+
+#headerpage {
+  position: relative;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+#headerpage.introheader {
+  position: relative;
+  width: 100%;
+}
+
+#headerpage.introheader #information {
+  position: absolute;
+  top: 43%;
+  color:$primaerfarbe;
+  align-items: center;
+width: 100%;
+}
+
+#headerpage #information {
+  margin: 0;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+#headerpage #information #person {
+  font-size: 6rem;
+  color: white;
+  text-shadow: 0 9px #696969;
+}
+
+#headerpage #information #subtitle {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+#headerpage #scroll_down {
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+
+}
+
+#headerpage #scroll-down .scroll-down-effects {
+  position: relative;
+  width: 100%;
+  font-size: 30px;
+  align-items: center;
+}
+
+#headerpage #person {
+  text-align: center;
+}
+
+#headerpage #typewriter_subtitle #subtitle{
+  text-align: center;
+}
+#scrolldown .scroll-down-effects {
+  text-align: center;
+  line-height: 1.5;
+}
+
+header {
+  display: block;
+}
+
+:root {
+    font-size: 16px;
+    font-family: $baseFontFamily;
+    color: $primaerfarbe;
+    --text-primary: $primaerfarbe;
+    --text-secondary: $sekundaerfarbe;
+    --transition-speed: 600ms;
+
+}
+
+body {
+    background-color: $backgroundcolor;
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+background: $sekundaerfarbe;
+}
+
+body::-webkit-scrollbar-thumb {
+background: $primaerfarbe;
+}
+
+main {
+    margin-left: 5rem;
+    padding: 1rem;
+}
+
+.navbar {
+    position: fixed;
+    background-color: $navbarback;
+    transition: width 200ms ease;
+
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-item {
+    width: 100%;
+}
+
+.nav-item:last-child{
+    margin-top: auto;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: $primaerfarbe;
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-speed);
+}
+
+.nav-link:hover{
+    filter: grayscale(0%) opacity(1);
+    background: $navbarfocus;
+}
+
+.link-text {
+    display: none;
+    margin-left: 1rem;
+}
+
+.nav-link i {
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 1.5rem;
+} 
+
+.navbar:hover .link-text {
+    display: block;
+
+}
+
+i {
+    color: $iconfarbe;
+    transition: var(--transition-speed);
+} 
+
+
+/* Smaller Screens */
+@media only screen and (max-width: 600px) {
+    .navbar{
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+    .logo {
+        display: none;
+      }
+    
+      .navbar-nav {
+        flex-direction: row;
+      }
+    
+      .nav-link {
+        justify-content: center;
+      }
+    
+      main {
+        margin: 0;
+      }
+}
+
+/* Bigger Screens*/
+@media only screen and (min-width: 600px) {
+    .navbar {
+      top: 0;
+      width: 5rem;
+      height: 100vh;
+    }
+  
+    .navbar:hover {
+      width: 16rem;
+    }
+  
+    .navbar:hover .link-text {
+      display: inline;
+    }
+  
+    /* Change to logo 
+    .navbar:hover .logo svg
+    {
+      margin-left: 11rem;
+    }
+  */
+    .navbar:hover .logo-text
+    {
+      left: 0px;
+    }
+  }
